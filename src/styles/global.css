@@ -26,18 +26,18 @@
   }
 
   .border-clock {
-    border: 0.5rem solid #966f33;
-    border-radius: 2rem;
+    border: max(8vh, 2rem) solid #966f33;
+    border-radius: min(12vh, 8rem);
   }
 
   .clock-button {
-    border-radius: 0.25rem;
-    clip-path: polygon(0.5rem 0px, 0.5rem 100%, 100% 100%, 100% 0px);
+    border-radius: 0.5rem;
+    clip-path: polygon(1.5rem 0px, 1.5rem 100%, 100% 100%, 100% 0px);
   }
 
   .clock-button:active {
-    transform: translateX(-0.125rem);
-    clip-path: polygon(0.625rem 0px, 0.625rem 100%, 100% 100%, 100% 0px);
+    transform: translateX(-0.5rem);
+    clip-path: polygon(2rem 0px, 2rem 100%, 100% 100%, 100% 0px);
   }
 }
 

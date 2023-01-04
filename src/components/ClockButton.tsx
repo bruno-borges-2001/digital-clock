@@ -8,8 +8,8 @@ export default function ClockButton({ children, className, small, ...rest }: Clo
   return (
     <button
       className={
-        clsx("p-[.125rem] flex justify-end items-center absolute z-0 clock-button",
-          small ? 'h-4 w-4 right-[-.5rem]' : 'h-6 w-6 right-[-1rem]',
+        clsx("p-[.125rem] flex justify-end items-center absolute z-0 clock-button aspect-square",
+          small ? 'h-[15%] left-[calc(100%-1.5rem)]' : 'h-[20%] left-[calc(100%-1.5rem)]',
           className
         )
       }

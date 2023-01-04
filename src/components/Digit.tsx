@@ -26,7 +26,7 @@ export default function Digit({ number, size }: DigitProps) {
 
   return (
     <div style={{ height: size }} className={clsx(
-      'aspect-[1/2] grid grid-cols-digit grid-rows-digit relative',
+      'aspect-[1/2] grid grid-cols-digit grid-rows-digit relative min-h-[160px]',
       {
         'h-20': !size
       }

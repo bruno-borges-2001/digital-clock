@@ -79,36 +79,36 @@ export default function Clock() {
   return (
     <div className="relative w-fit">
       <div className="p-5 flex flex-grow-0 flex-row gap-2 border-clock bg-slate-900 z-[999] w-fit">
-        <Digit number={timeDigits[0]} />
-        <Digit number={timeDigits[1]} />
+        <Digit number={timeDigits[0]} size={'30vh'} />
+        <Digit number={timeDigits[1]} size={'30vh'} />
         <Colon />
-        <Digit number={timeDigits[2]} />
-        <Digit number={timeDigits[3]} />
+        <Digit number={timeDigits[2]} size={'30vh'} />
+        <Digit number={timeDigits[3]} size={'30vh'} />
         <Colon />
-        <Digit number={timeDigits[4]} />
-        <Digit number={timeDigits[5]} />
+        <Digit number={timeDigits[4]} size={'30vh'} />
+        <Digit number={timeDigits[5]} size={'30vh'} />
       </div>
       <ClockButton
         onClick={() => toggleClockMode(clockMode === ClockMode.TIMER ? ClockMode.CLOCK : ClockMode.TIMER)}
-        className="bg-red-500 top-[2rem] clock-button">
-        <AiOutlineClockCircle fill="white" />
+        className="bg-red-500 top-[20.5%] clock-button">
+        <AiOutlineClockCircle fill="white" size={'max(4vh, 1.5rem)'} />
       </ClockButton>
 
       <ClockButton
         small
         onClick={() => clockMode !== ClockMode.CLOCK && setClockMode(prev => prev === ClockMode.TIMER ? ClockMode.STOPPED : ClockMode.TIMER)}
-        className="bg-slate-600 top-[4rem] clock-button"
+        className="bg-slate-600 top-[42.5%]"
       >
         {
-          clockMode === ClockMode.STOPPED ? <BiPlay size={8} fill="white" /> : <BiPause size={8} fill="white" />
+          clockMode === ClockMode.STOPPED ? <BiPlay size={'max(3vh, 1rem)'} fill="white" /> : <BiPause size={'max(4vh, 1rem)'} fill="white" />
         }
       </ClockButton>
       <ClockButton
         small
         onClick={() => clockMode !== ClockMode.CLOCK && toggleClockMode(ClockMode.TIMER)}
-        className="bg-slate-600 top-[5.5rem] clock-button"
+        className="bg-slate-600 top-[61%]"
       >
-        <VscDebugRestart size={8} style={{ rotate: '65deg' }} fill="white" />
+        <VscDebugRestart size={'max(3vh, 1rem)'} style={{ rotate: '65deg' }} fill="white" />
       </ClockButton>
     </ div>
   )
